@@ -5,14 +5,12 @@ import "forge-std/console.sol";
 
 contract Example {
     uint8 a = 255; // 0 -> 255
-    uint256 b = 22; // alias: uint
-
-    constructor() {}
+    uint256 b = type(uint).max; // alias: uint
 
     int8 c = 127; // -128 -> 127
     int256 d = -55; // alias: int256
 
-    bool myCondition = true;
+    bool myConditio = true;
 
     enum Choice {
         Up,
@@ -22,4 +20,15 @@ contract Example {
     }
 
     Choice choice = Choice.Up;
+
+    constructor(Choice choice) {
+        if(choice == Choice.Up) {
+            console.log("up");
+        }      
+        if(choice == Choice.Down) {
+            console.log("down");
+        }   
+    }
+
+    
 }
