@@ -9,11 +9,11 @@ contract ExampleTest is Test {
     Example public example;
 
     function setUp() public {
-        example = new Example(4, 4);
+        example = new Example(6, 6);
     }
 
     function testExample() public {
-        assertEq(example.sum(), 8);
-        assertEq(example.product(), 16);
+        assertEq(example.sum(), 12);
+        assertEq(example.product(), 36);
     }
 }
