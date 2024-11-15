@@ -8,6 +8,8 @@ contract A {
 
     constructor(address _b) payable {
         b = _b;
+        console.log(msg.value);
+        console.log(address(this).balance);
     }
 
     function payHalf() external {
@@ -18,5 +20,9 @@ contract A {
 }
 
 contract B {
-    receive() external payable {}
+    address mostRecentPayer;
+    receive() external payable {
+        mostRecentPayer = msg.sender;
+        console.log(mostRecentPayer);
+    }
 }

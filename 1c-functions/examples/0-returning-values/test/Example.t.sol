@@ -15,5 +15,6 @@ contract ExampleTest is Test {
     function testExample() public {
         assertEq(example.sum(), 12);
         assertEq(example.product(), 36);
+        assertEq(example.add(4),10);
     }
 }
