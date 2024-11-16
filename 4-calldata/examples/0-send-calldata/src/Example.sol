@@ -10,12 +10,12 @@ contract A {
     constructor(address _b) {
         b = _b;
 
-        sum = iB(b).add(15, 10, 25);
+        sum = iB(b).add(15, 10);
     }
 }
 
 interface iB {
-    function add(uint256, uint256, uint256) external pure returns (uint256);
+    function add(uint256, uint256) external pure returns (uint256);
 }
 
 contract B {
