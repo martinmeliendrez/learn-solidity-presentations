@@ -15,4 +15,8 @@ contract Hero {
     function alert(uint enemies, bool armed) external {
         ambush = Ambush(true, enemies, armed);
     }
+
+    fallback() external {
+        lastContact = block.timestamp;
+    }
 }
