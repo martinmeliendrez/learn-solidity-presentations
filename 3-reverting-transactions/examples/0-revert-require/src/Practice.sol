@@ -9,6 +9,7 @@ pragma solidity ^0.8.20;
 // 1. Create a public function withdraw that will withdraw all funds from the contract and send them to the deployer of the contract.
 // 2. Require that only the deployer of the contract be allowed to call this function. For all other addresses, this function should revert.
 
+
 contract Contract {
     address deployer = msg.sender;
 
